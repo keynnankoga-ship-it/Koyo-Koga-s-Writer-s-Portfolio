@@ -261,5 +261,46 @@ section {
 
   .nav-menu {
     gap: 16px;
+    /* PORTFOLIO CONTROLS */
+.portfolio-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  border: none;
+  background: #eef2ff;
+  color: #2563eb;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-buttons button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background: #2563eb;
+  color: white;
+}
+
   }
 }
