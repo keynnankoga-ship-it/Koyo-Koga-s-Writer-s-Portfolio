@@ -1,47 +1,42 @@
-'use strict';
-
-// Contact Form Handling
-const contactForm = document.querySelector('#contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(data)
-            });
-            if (response.ok) {
-                alert('Message sent successfully!');
-                contactForm.reset();
-            } else {
-                alert('Error sending message. Please try again later.');
-            }
-        } catch (error) {
-            alert('There was a problem with your request');
-            console.error('Error:', error);
-        }
+// Smooth Scrolling Navigation
+const smoothScroll = (target) => {
+    document.querySelector(target).scrollIntoView({
+        behavior: 'smooth'
     });
-}
+};
 
-// Smooth Scrolling
-const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+// Event listener for navigation links
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('href');
+        smoothScroll(target);
+    });
+});
 
-smoothScrollLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+// CTA Button Functionality
+const ctaButton = document.getElementById('cta-button');
+ctaButton.addEventListener('click', () => {
+    alert('CTA button clicked!'); // Replace with desired functionality
+});
 
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+// Form Submission Handling
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    // Implement AJAX request to submit the form data
+    fetch('submit_form_url', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Handle success response
+    })
+    .catch((error) => {
+        console.error('Error:', error);
     });
 });
