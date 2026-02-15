@@ -6,80 +6,70 @@
 <title>Koyo Koga | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">KOYO KOGA</div>
-        <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+  <div class="nav-container">
+    <div class="logo">KOYO KOGA</div>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO / HOME -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-image">
-            <img src="icons/prof.jpeg" alt="Koyo Koga">
-        </div>
-        <div class="hero-text">
-            <h1>Hi, I'm Koyo Koga</h1>
-            <p class="tagline">Literature • Technology</p>
-            <p>Turning coffee, code, and commas into compelling creations.</p>
-            <a href="#portfolio" class="cta-button">Explore My Work</a>
-        </div>
+<!-- HERO -->
+<section id="home" class="section hero">
+  <div class="hero-inner">
+    <img src="icons/prof.jpeg" alt="Koyo Koga" class="profile-img">
+    <div>
+      <h1>Koyo Koga</h1>
+      <p class="tagline">Literature • Technology</p>
+      <p>Turning coffee, code, and commas into compelling creations.</p>
+      <a href="#portfolio" class="btn">Explore My Work</a>
     </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <p class="about-text">
-            I'm a dynamic professional blending the power of words with the precision of code. 
-            As a writer, I craft compelling narratives, insightful analysis, and engaging content 
-            that informs, inspires, and provokes thought. As an I.T. professional specializing 
-            in programming, I design and develop responsive, user-centered websites and digital 
-            portfolios that combine functionality with clean, modern aesthetics.
-            My work sits at the intersection of creativity and technology, where storytelling 
-            meets structured logic.
-        </p>
-    </div>
-</section>
-
-<!-- CONTROLS -->
-<section class="portfolio-controls">
-    <input type="text" id="searchInput" placeholder="Search articles...">
-
-    <div class="filter-buttons">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="political">Political</button>
-        <button data-filter="social">Social</button>
-        <button data-filter="philosophical">Philosophical</button>
-        <button data-filter="geopolitical">Geo-Political</button>
-        <button data-filter="memorium">Memorium</button>
-        <button data-filter="art">Art</button>
-    </div>
+<section id="about" class="section about">
+  <div class="content">
+    <h2>About Me</h2>
+    <p>
+      I'm a dynamic professional blending the power of words with the precision of code.
+      As a writer, I craft compelling narratives, insightful analysis, and engaging content.
+      As an I.T. professional specializing in programming, I design and develop responsive,
+      user-centered websites with clean, modern aesthetics.
+    </p>
+  </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio">
-<div class="container">
-<h2>My Writing Works</h2>
+<section id="portfolio" class="section portfolio">
+  <div class="content">
 
-<div class="works-grid">
+    <h2>Writing Works</h2>
 
-<!-- ================= WORK ITEMS (ALL 25 INCLUDED) ================= -->
+    <input type="text" id="searchInput" placeholder="Search works...">
+
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="political">Political</button>
+      <button data-filter="social">Social</button>
+      <button data-filter="philosophical">Philosophical</button>
+      <button data-filter="geopolitical">Geo-Political</button>
+      <button data-filter="memorium">Memorium</button>
+      <button data-filter="art">Art</button>
+    </div>
+
+    <div class="grid">
+
+        <!-- ================= WORK ITEMS (ALL 25 INCLUDED) ================= -->
 
 <!-- Work 1 -->
 <div class="work-item political">
@@ -375,37 +365,31 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-<div class="container">
-<h2>Get in Touch</h2>
+<section id="contact" class="section contact">
+  <div class="content">
+    <h2>Get in Touch</h2>
 
-<div class="contact-wrapper">
+    <form action="https://formspree.io/f/mzdardwe" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
 
-<form class="contact-form" action="https://formspree.io/f/mzdardwe" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="tel" name="phone" placeholder="Phone">
-<input type="text" name="subject" placeholder="Subject" required>
-<textarea name="message" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-<div class="social-links">
-<a href="https://github.com/keynnankoga-ship-it" target="_blank"><i class="fa-brands fa-github"></i></a>
-<a href="https://twitter.com/KoyoKeynnan" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="https://www.linkedin.com/in/kenan-koga/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-<a href="https://instagram.com/keynn.an" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-</div>
-
-</div>
-</div>
+    <div class="social">
+      <a href="https://github.com/keynnankoga-ship-it" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://twitter.com/KoyoKeynnan" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/kenan-koga/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://instagram.com/keynn.an" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-<p>&copy; 2026 Koyo Koga. All rights reserved.</p>
+<footer>
+  <p>© 2026 Koyo Koga</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
