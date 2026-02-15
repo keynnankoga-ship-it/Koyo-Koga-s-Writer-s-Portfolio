@@ -71,7 +71,8 @@ body {
 
 
 .hero-image {
-  flex: 1 1 300px; /* flexible width with minimum */
+  margin-bottom: 20px;
+}
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +88,9 @@ body {
 }
 
 .hero-text {
-  flex: 2 1 400px;
+  margin-top: 10px;
+}
+
   padding: 20px;
   display: flex;
   flex-direction: column;
